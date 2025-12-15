@@ -11,16 +11,17 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table
+@Table(name = "estado")
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class Rol {
-    
+@AllArgsConstructor
+public class Estado {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    
-    @Column(name = "nombreRol", length = 30, nullable = true)
+
+    @Column(nullable = false, unique = true, length = 30)
     private String nombre;
+
 }
