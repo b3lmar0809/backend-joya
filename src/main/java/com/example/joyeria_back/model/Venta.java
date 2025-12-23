@@ -18,22 +18,22 @@ public class Venta {
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "id_usuario")
     private Usuario usuario;
 
     @Column(name = "fechaVenta")
     private LocalDateTime fecha;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "id_estado")
     private Estado estado;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "id_metodoPago")
     private MetodoPago metodoPago;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "id_metoEnvio")
     private MetodoEnvio metodoEnvio;
 
     @Column(name = "totalVenta")

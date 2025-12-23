@@ -33,7 +33,7 @@ public class Producto {
     private Double precio;
 
     @Column(nullable = true)
-    private double descuento;
+    private Double descuento;
 
     @Column(nullable = false)
     private Integer stock;
@@ -42,26 +42,26 @@ public class Producto {
     private String img;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "id_material")
     private Material material;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "id_color")
     private Color color;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "id_categoria")
     private Categoria categoria;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "id_talla")
     private Talla talla;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "id_marca")
     private Marca marca;
 
     @ManyToOne 
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "id_genero")
     private Genero genero;
 }

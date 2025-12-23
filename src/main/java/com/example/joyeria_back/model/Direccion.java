@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 public class Direccion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idDireccion;
+    private Integer id;
 
     @Column(nullable = false, length = 100)
     private String calle;
@@ -29,7 +29,7 @@ public class Direccion {
     private String numero;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "id_comuna")
     private Comuna comuna;
 
 }

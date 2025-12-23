@@ -3,10 +3,10 @@ package com.example.joyeria_back.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.joyeria_back.model.Usuario;
+import com.example.joyeria_back.model.Comuna;
 
 @Repository
-public interface UsurioaRepository extends JpaRepository<Usuario, Integer>{
-    Usuario finByCorreo(String correo);
+public interface ComunaRepository extends JpaRepository<Comuna, Integer> {
 
+    
 }

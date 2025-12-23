@@ -14,12 +14,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class Talla {
     @Id
     @GeneratedValue
     private Integer id;
 
-    @Column(nullable = true)
+    @Column(nullable = false, name = "valorTalla", length = 15)
     private String valor;
 }
